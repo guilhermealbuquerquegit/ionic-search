@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Detalhes do Aluno</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      Dados Pessoais
+    </ion-list-header>
+    <ion-item>{{aluno.nome}}</ion-item>
+    <ion-item>{{aluno.email}}</ion-item>
+  </ion-list>
+
+  <ion-fab right bottom>
+    <button ion-fab color="primary" (click)="editarAluno()"><ion-icon name="create"></ion-icon></button>
+  </ion-fab>
+</ion-content>

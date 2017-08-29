@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Alunos</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div padding text-center>
+    <ion-spinner *ngIf="!pronto"></ion-spinner>
+  </div>
+
+  <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="setFilteredItems()"></ion-searchbar>
+
+  <ion-list>
+    <button ion-item *ngFor="let aluno of alunos | async" (click)="detalhe(aluno)">
+      {{ aluno.nome }}
+    </button>
+  </ion-list>
+
+    <ion-fab right bottom>
+      <button ion-fab color="primary" (click)="adicionarAluno()"><ion-icon name="add"></ion-icon></button>
+    </ion-fab>
+</ion-content>

@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Criar novo aluno</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list margin-top>
+    <ion-item>
+      <ion-label stacked>Nome</ion-label>
+      <ion-input type="text" [(ngModel)]="aluno.nome"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Email</ion-label>
+      <ion-input type="text" [(ngModel)]="aluno.email"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-fab right bottom>
+    <button ion-fab color="primary" (click)="salvarAluno()"><ion-icon name="checkmark"></ion-icon></button>
+  </ion-fab>
+</ion-content>
